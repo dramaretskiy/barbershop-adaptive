@@ -1,5 +1,12 @@
-# Object file
-*.o
-
-# Ada Library Information
-*.ali
+.DS_Store
+.idea
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+source/css/*.css
+node_modules/
+build/
+Thumbs.db
+npm-debug.*
