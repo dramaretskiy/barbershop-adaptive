@@ -1,31 +1,31 @@
 "use strict";
 
 var gulp = require("gulp");
-var less = require("gulp-less");
+var del = require("del");
 var plumber = require("gulp-plumber");
+var less = require("gulp-less");
 var postcss = require("gulp-postcss");
+var autoprefixer = require("autoprefixer");
+var minify = require("gulp-csso");
+var rename = require("gulp-rename");
+var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var minifyhtml = require("gulp-htmlmin");
-var autoprefixer = require("autoprefixer");
-var svgstore = require("gulp-svgstore");
-var minify = require("gulp-csso");
 var minifyjs = require("gulp-uglify");
-var rename = require("gulp-rename");
-var server = require("browser-sync").create();
-var del = require("del");
 var run = require("run-sequence");
+var server = require("browser-sync").create();
 
 /* Задание для очистки папки build
-Команда gulp clean*/
+Команда gulp clean */
 
 gulp.task("clean", function () {
   return del("build");
 });
 
 /* Задание для копирования файлов в папку build
-Что копировались не только файлы, но и папки, указываем, что базовая папка для gulp это source
-Команда gulp copy*/
+Чтобы копировались не только файлы, но и папки, указываем, что базовая папка для gulp это source
+Команда gulp copy */
 
 gulp.task("copy", function () {
   return gulp.src([
@@ -38,8 +38,8 @@ gulp.task("copy", function () {
   .pipe(gulp.dest("build"));
 });
 
-/* Задание запускает препроцессор, собирает файл css, делает префиксы, миминизирует и снова созраняет в папку build
-Команда gulp style*/
+/* Задание запускает препроцессор, собирает файл css, делает префиксы, миминизирует и снова сохраняет в папку build
+Команда gulp style */
 
 gulp.task("style", function () {
   gulp.src("source/less/style.less")
@@ -56,7 +56,7 @@ gulp.task("style", function () {
 });
 
 /* Задание делает спрайт из файлов, на которые мы указываем, в инлайновом виде, то есть можно вносить изменения через CSS
-Команда gulp sprite*/
+Команда gulp sprite */
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/icon-*.svg")
@@ -68,7 +68,7 @@ gulp.task("sprite", function () {
 });
 
 /* Запускаем posthtml c плагином include, чтобы автоматически вставить спрайт в html файл, минифицируем html
-Команда gulp html*/
+Команда gulp html */
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
@@ -87,7 +87,8 @@ gulp.task("html", function () {
   .pipe(server.stream());
 });
 
-/* Запускаем минификацию js*/
+/* Запускаем минификацию js
+Команда gulp minjs */
 
 gulp.task("minjs", function () {
   gulp.src("source/js/script.js")
@@ -99,7 +100,7 @@ gulp.task("minjs", function () {
 });
 
 /* Запускаем последовательно все задания
-Команда npm run build*/
+Команда npm run build */
 
 gulp.task("build", function (done) {
   run(
@@ -113,9 +114,9 @@ gulp.task("build", function (done) {
   );
 });
 
-/* Живой сервер разработки, отсеживает изменения в sass и html  файлах и если фиксирует их
+/* Живой сервер разработки, отслеживает изменения в  less и html  файлах, и если фиксирует их
 прогоняет через все наши зависимости и загружает страницу с изменениями
-Команда gulp serve*/
+Команда gulp serve */
 
 gulp.task("serve", function() {
   server.init({
