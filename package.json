@@ -2,7 +2,7 @@
   "name": "barbershop-adaptive",
   "version": "1.0.0",
   "description": "Бородинский",
-  "main": "gruntfile.js",
+  "main": "gulpfile.js",
   "scripts": {
     "build": "gulp build",
     "start": "npm run build && gulp serve"
