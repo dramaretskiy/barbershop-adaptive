@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Запись на стрижку</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+      <img class="page-header__logo" src="" alt="Логотип" width="226" height="30">
+      <nav class="main-navigation">
+        <button class="main-navigation__button" type="button">Открыть меню</button>
+        <div class="main-navigation__wrapper">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Наши работы</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--active" href="#">Записаться</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Контакты</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Html academy</a>
+            </li>
+          </ul>
+          <ul class="user-navigation__list">
+            <li class="user-navigation__item">
+              <a class="user-navigation__link" href="#">Войти</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+      <section class="record">
+        <div class="record__wrapper">
+          <h2 class="record__headline">Запись на стрижку</h2>
+          <form class="record__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="record__text-fields">
+              <input class="record__text" type="text" name="surname" id="surname" placeholder="Фамилия">
+              <input class="record__text" type="text" name="name" id="name" placeholder="Имя">
+              <input class="record__text" type="text" name="patronymic" id="patronymic" placeholder="Отчество">
+              <input class="record__text" type="tel" name="phone" id="phone" placeholder="Контактный телефон">
+              <input class="record__text" type="email" name="email" id="email" placeholder="Контактный e-mail">
+              <textarea name="comment" id="comment" rows="6" cols="30" placeholder="Доп. информация для мастера"></textarea>
+            </div>
+            <fieldset class="record__beard-model">
+              <legend class="record__subtitle">Выберите модель бороды:</legend>
+              <ul class="record__radio-buttons">
+                <li class="record__beard-model">
+                  <input type="radio" name="beard-model" id="admiral" value="admiral" checked>
+                  <label for="admiral">адмирал</label>
+                  <img src="" alt="адмирал">
+                </li>
+                <li class="record__beard-model">
+                  <input type="radio" name="beard-model" id="lumberjack" value="lumberjack">
+                  <label for="lumberjack">лесоруб</label>
+                  <img src="" alt="лесоруб">
+                </li>
+                <li class="record__beard-model">
+                  <input type="radio" name="beard-model" id="polar" value="polar">
+                  <label for="polar">полярник</label>
+                  <img src="" alt="полярник">
+                </li>
+                <li class="record__beard-model">
+                  <input type="radio" name="beard-model" id="boyar" value="boyar">
+                  <label for="boyar">боярин</label>
+                  <img src="" alt="боярин">
+                </li>
+                <li class="record__beard-model">
+                  <input type="radio" name="beard-model" id="sage" value="sage">
+                  <label for="sage">мудрец</label>
+                  <img src="" alt="мудрец">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="record__add-services">
+              <legend class="record__subtitle">Дополнительные услуги:</legend>
+              <input type="checkbox" name="add-service" id="paint-beard" value="paint-beard" checked>
+              <label class="record__checkbox checkbox" for="paint-beard">Подкрасить бороду</label>
+              <input type="checkbox" name="add-service" id="wind-mustache" value="wind-mustache" checked>
+              <label class="record__checkbox checkbox" for="wind-mustache">Накрутить усы</label>
+              <input type="checkbox" name="add-service" id="comb-beard" value="comb-beard">
+              <label class="record__checkbox checkbox" for="comb-beard">Причесать бороду</label>
+              <input type="checkbox" name="add-service" id="straighten-hair" value="straighten-hair">
+              <label class="record__checkbox checkbox" for="straighten-hair">Подровнять виски</label>
+              <input type="checkbox" name="add-service" id="remove-gray-hair" value="remove-gray-hair">
+              <label class="record__checkbox checkbox" for="remove-gray-hair">Убрать седину</label>
+              <input type="checkbox" name="add-service" id="polish-bald" value="polish-bald">
+              <label class="record__checkbox checkbox" for="polish-bald">Отполировать лысину</label>
+            </fieldset>
+            <button class="record__submit button" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+      <footer class="page-footer">
+        <div class="page-footer__wrapper">
+          <div class="page-footer__contacts contacts">
+            <b class="contacts__headline">Барбершоп Бородинский</b>
+            <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+              <a class="contacts__phone" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            </p>
+          </div>
+          <div class="page-footer__social social">
+            <ul class="social__list">
+              <li class="social__item social__item--vkontakte">
+                <a class="social__link" href="#">Мы в вконтакте</a>
+              </li>
+              <li class="social__item social__item--facebook">
+                <a class="social__link" href="#">Мы в фейсбуке</a>
+              </li>
+              <li class="social__item social__item--instagram">
+                <a class="social__link" href="#">Мы в инстаграме</a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__copyright copyright">
+            <span class="copyright__text">Разработано:</span>
+            <a class="button copyright__link" href="#">Html academy</a>
+          </div>
+        </div>
+      </footer>
+
+  </body>
+</html>
