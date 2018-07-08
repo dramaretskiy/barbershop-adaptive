@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/dramaretskiy/barbershop-adaptive/issues"
   },
-  "homepage": "https://github.com/dramaretskiy/barbershop-adaptive#readme"
+  "homepage": "https://github.com/dramaretskiy/barbershop-adaptive#readme",
+  "dependencies": {
+    "package": "^1.0.1"
+  }
 }
