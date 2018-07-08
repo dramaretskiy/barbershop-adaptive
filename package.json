@@ -1,0 +1,25 @@
+{
+  "name": "barbershop-adaptive",
+  "version": "1.0.0",
+  "description": "Бородинский",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dramaretskiy/barbershop-adaptive.git"
+  },
+  "keywords": [
+    "barber"
+  ],
+  "author": "dramaretskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dramaretskiy/barbershop-adaptive/issues"
+  },
+  "homepage": "https://github.com/dramaretskiy/barbershop-adaptive#readme",
+  "dependencies": {
+    "package": "^1.0.1"
+  }
+}
