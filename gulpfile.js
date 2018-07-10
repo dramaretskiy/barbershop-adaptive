@@ -127,7 +127,7 @@ gulp.task("serve", function() {
     // ui: false
   });
 
-  gulp.watch("source/less/*.less", ["style"]);
+  gulp.watch("source/less/**/*.less", ["style"]);
   gulp.watch("source/*.html", ["html"]);
   gulp.watch("source/*.js", ["js"]);
   // gulp.watch("source/*.html").on("change", server.reload);
