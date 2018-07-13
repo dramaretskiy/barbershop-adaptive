@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru" >
   <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Барбершоп "Бородинский"</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -115,6 +116,7 @@
       <section class="reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__headline">Отзывы о нас</h2>
+          <a class="reviews-comment__toggle" href="#">Оставить свой</a>
           <div class="reviews__list slider__list">
             <blockquote class="slider__item">
               <p class="reviews__author-photo">
@@ -137,6 +139,8 @@
               <b class="reviews__author-name">Иван Бородайло</b>
               <p class="reviews__author-text">В Бородинском ваша борода в надёжных руках!</p>
             </blockquote>
+            <button class="reviews__prev" type="button"></button>
+            <button class="reviews__next" type="button"></button>
             <p class="reviews__toggles slider__toggles">
               <button class="slider__toggle" type="button">1</button>
               <button class="slider__toggle" type="button">2</button>
@@ -157,6 +161,7 @@
             </p>
           </div>
           <div class="page-footer__social social">
+            <span class="page-footer__social-title">Давайте дружить!</span>
             <ul class="social__list">
               <li class="social__item social__item--vkontakte">
                 <a class="social__link" href="#">Мы в вконтакте</a>
