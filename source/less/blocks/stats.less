@@ -19,6 +19,8 @@
 }
 
 .stats__list {
+  width: 100%;
+
   border-collapse: collapse;
 
   & tr {
@@ -33,7 +35,6 @@
     background-color: #353535;
   }
 }
-
 
 .stats__value {
   .set-font(bold, 40px, 40px);
@@ -54,5 +55,43 @@
 
   &--top {
     display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .stats__slogan {
+    .set-font(bold, 40px, 40px);
+  }
+
+  .stats__legend {
+    &--top {
+      display: block;
+      color: @black;
+      opacity: 0.3;
+    }
+
+    &--bottom {
+      display: none;
+    }
+  }
+
+  .stats__list {
+    display: block;
+
+    & tbody {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    & tr {
+      display: block;
+      width: 50%;
+
+      box-sizing: border-box;
+    }
+  }
+
+  .stats__value {
+    .set-font(bold, 72px, 82px);
   }
 }
