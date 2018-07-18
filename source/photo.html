@@ -11,14 +11,15 @@
     <header class="page-header">
       <img class="page-header__logo" src="" alt="Логотип" width="226" height="30">
       <nav class="main-navigation">
+      <nav class="main-navigation main-navigation--opened">
         <button class="main-navigation__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="index.html">Главная</a>
             </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link main-navigation__link--active" href="#">Наши работы</a>
+            <li class="main-navigation__item main-navigation__item--active">
+              <a class="main-navigation__link main-navigation__link--active" href="photo.html">Наши работы</a>
             </li>
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="form.html">Записаться</a>
@@ -86,42 +87,37 @@
       </section>
 
       <section class="price-list">
-        <div class="price-list__wrapper ">
+        <div class="price-list__wrapper">
           <h2 class="price-list__headline">Прейскурант</h2>
           <table class="price-list__items">
             <tr>
-              <td class="price-list__option">
-                <b class="price-list__haircut">Классическая стрижка</b>
-                (с мытьём головы)
-              </td>
+              <td class="price-list__number">1</td>
+              <td class="price-list__haircut">Классическая стрижка</td>
+              <td class="price-list__add-services">(с мытьём головы)</td>
               <td class="price-list__cost">1 500 руб.</td>
             </tr>
             <tr>
-              <td class="price-list__option">
-                <b class="price-list__haircut">Современный вариант</b>
-                (с мытьём головы)
-              </td>
+              <td class="price-list__number">2</td>
+              <td class="price-list__haircut">Современный вариант</td>
+              <td class="price-list__add-services">(с мытьём головы)</td>
               <td class="price-list__cost">1 500 руб.</td>
             </tr>
             <tr>
-              <td class="price-list__option">
-                <b class="price-list__haircut">Индивидуальный подход</b>
-                (с мытьём головы)
-              </td>
+              <td class="price-list__number">3</td>
+              <td class="price-list__haircut">Индивидуальный подход</td>
+              <td class="price-list__add-services">(с мытьём головы)</td>
               <td class="price-list__cost">2 000 руб.</td>
             </tr>
             <tr>
-              <td class="price-list__option">
-                <b class="price-list__haircut">Бритьё головы</b>
-                (без мытья)
-              </td>
+              <td class="price-list__number">4</td>
+              <td class="price-list__haircut">Бритьё головы</td>
+              <td class="price-list__add-services">(без мытья)</td>
               <td class="price-list__cost">500 руб.</td>
             </tr>
             <tr>
-              <td class="price-list__option">
-                <b class="price-list__haircut">Бритьё головы</b>
-                (с мытьём головы)
-              </td>
+              <td class="price-list__number">5</td>
+              <td class="price-list__haircut">Бритьё головы</td>
+              <td class="price-list__add-services">(с мытьём головы)</td>
               <td class="price-list__cost">1 000 руб.</td>
             </tr>
           </table>
