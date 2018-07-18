@@ -4,6 +4,48 @@
 
 .advantages__list {
   .reset-list();
+
+  list-style: none;
+}
+
+.advantages__item {
+  position: relative;
+
+  padding: 0 20px;
+  padding-top: 125px;
+
+  text-align: center;
+}
+
+.advantages__item:not(:first-child) {
+  display: none;
+}
+
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 95px;
+  height: 94px;
+
+  transform: translateX(-50%);
+}
+
+.advantages__item--fast::before {
+  background-image: url(../img/advantage-1-illustration.svg);
+  background-repeat: no-repeat;
+}
+
+.advantages__item--cool::before {
+  background-image: url(../img/advantage-2-illustration.svg);
+  background-repeat: no-repeat;
+}
+
+.advantages__item--expensive::before {
+  background-image: url(../img/advantage-3-illustration.svg);
+  background-repeat: no-repeat;
 }
 
 .advantages__name {
@@ -22,6 +64,84 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
+    margin-top: 40px;
+
     background-color: #353535;
+  }
+
+  .advantages__wrapper {
+    width: 640px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .advantages__item {
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 130px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #4a4a4a;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &::before {
+      top: 45px;
+      left: 48px;
+    }
+  }
+
+    .advantages__item:not(:first-child) {
+      display: block;
+    }
+
+  .advantages__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    margin-top: 80px;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__wrapper {
+    width: 960px;
+    padding: 0;
+  }
+
+  .advantages__item {
+    width: 320px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 125px;
+    padding-bottom: 0;
+
+    text-align: center;
+
+    border-bottom: none;
+
+    &::before {
+      top: 0;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+  }
+
+  .advantages__item:not(:first-child) {
+    display: block;
   }
 }
