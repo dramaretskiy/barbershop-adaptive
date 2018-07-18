@@ -9,8 +9,13 @@
   <body>
 
     <header class="page-header">
-      <img class="page-header__logo" src="" alt="Логотип" width="226" height="30">
-      <nav class="main-navigation">
+      <div class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+          <img src="img/logotype-mobile.svg" alt="Логотип" width="370" height="153">
+        </picture>
+      </div>
       <nav class="main-navigation main-navigation--opened">
         <button class="main-navigation__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-navigation__wrapper">

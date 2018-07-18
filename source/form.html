@@ -9,9 +9,15 @@
   <body>
 
     <header class="page-header">
-      <img class="page-header__logo" src="" alt="Логотип" width="226" height="30">
-      <nav class="main-navigation">
-        <button class="main-navigation__button" type="button">Открыть меню</button>
+      <div class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+          <img src="img/logotype-mobile.svg" alt="Логотип" width="370" height="153">
+        </picture>
+      </div>
+      <nav class="main-navigation main-navigation--opened">
+        <button class="main-navigation__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
@@ -20,8 +26,8 @@
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="photo.html">Наши работы</a>
             </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link main-navigation__link--active" href="#">Записаться</a>
+            <li class="main-navigation__item main-navigation__item--active">
+              <a class="main-navigation__link main-navigation__link--active" href="form.html">Записаться</a>
             </li>
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="#">Контакты</a>
