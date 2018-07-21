@@ -1,3 +1,9 @@
+.reviews__wrapper {
+  position: relative;
+
+  padding-bottom: 35px;
+}
+
 .reviews__headline {
   margin: 0;
 
@@ -10,8 +16,16 @@
   display: none;
 }
 
-.slider__item {
+.reviews__list {
+  padding-bottom: 50px;
+}
+
+.reviews__item {
   margin: 0;
+
+  &:not(:first-child) {
+    display: none;
+  }
 }
 
 .reviews__author-photo {
@@ -26,8 +40,14 @@
   margin: 0;
 }
 
-.reviews__toggles {
-  margin: 0;
+.slider .reviews__toggles {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+
+    width: 75px;
+
+    transform: translateX(-50%);
 }
 
 @media (min-width: @tablet-width) {
