@@ -1,5 +1,21 @@
 .advantages {
+  position: relative;
+
   background-color: @dark-grey;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 34px;
+
+    background-image: url(../img/corner-double.svg);
+    background-repeat: no-repeat;
+  }
 }
 
 .advantages__wrapper {
@@ -136,6 +152,7 @@
   .advantages__wrapper {
     width: 960px;
     padding: 0;
+    padding-bottom: 100px;
   }
 
   .advantages__item {
