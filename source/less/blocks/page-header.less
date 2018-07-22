@@ -102,6 +102,28 @@
     border-top: 1px solid #886e5b;
     border-bottom: 1px solid #71543f;
     background-color: #826550;
+
+    &:hover {
+      background-color: #755a46;
+    }
+
+    &:active {
+      background-color: #6a4d38;
+
+      opacity: 0.3;
+    }
+  }
+
+  .main-navigation--opened .user-navigation__link {
+    &:hover {
+      background-color: #745946;
+    }
+
+    &:active {
+      background-color: #654e3d;
+
+      opacity: 0.3;
+    }
   }
 
   .main-navigation--opened .main-navigation__button {
@@ -130,6 +152,20 @@
 
     &::after {
       transform: rotate(-45deg);
+    }
+  }
+
+  .main-navigation--closed .main-navigation__button,
+  .main-navigation--opened .main-navigation__button {
+    &:hover {
+      background-color: #624530;
+
+      cursor: pointer;
+    }
+
+    &:active::before,
+    &:active::after {
+      opacity: 0.3;
     }
   }
 }
@@ -212,6 +248,14 @@
 
     &:active {
       color: #747474;
+    }
+
+    &--active {
+      cursor: default;
+
+      &:hover {
+        color: #ffffff;
+      }
     }
   }
 
