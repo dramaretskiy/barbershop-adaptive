@@ -101,11 +101,26 @@
   }
 
   .stats__header {
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 29px 40px;
     padding-bottom: 28px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 30px;
+      left: -15px;
+
+      border: 15px solid transparent;
+      border-bottom-color: #ffffff;
+
+      transform: rotate(45deg);
+    }
   }
 
   .stats__slogan {
