@@ -2,16 +2,47 @@
   .paint(@grey, #ffffff);
 }
 
+.page-footer__wrapper {
+  padding-top: 35px;
+  padding-bottom: 25px;
+}
+
+.page-footer__contacts {
+  margin: 0 20px;
+  margin-bottom: 25px;
+
+  text-align: center;
+}
+
 .contacts__text {
   margin: 0;
+  margin-top: 15px;
 }
 
 .contacts__phone {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 0;
+
   font-weight: bold;
   color: #ffffff;
-
   text-decoration: none;
   text-transform: uppercase;
+
+  border: 1px solid #3e3e3e;
+
+  &:hover {
+    border-color: #515151;
+  }
+
+  &:active {
+    border-color: #252525;
+    background-color: #252525;
+  }
+}
+
+.page-footer__social {
+  margin-bottom: 30px;
 }
 
 .page-footer__social-title {
@@ -19,24 +50,197 @@
 }
 
 .social__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100px;
+
   .reset-list();
+
+  list-style: none;
+}
+
+.social__item {
+  position: relative;
+
+  flex-basis: 32%;
+  flex-grow: 1;
+
+  font-size: 0;
+
+  border: 1px solid #3f3f3f;
+
+  &:hover {
+    border-color: #545454;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    border-color: #252525;
+
+    background-color: #252525;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &--vkontakte::before {
+    width: 23px;
+    height: 26px;
+
+    background: url(../img/vk-big.png) no-repeat center;
+  }
+
+  &--facebook::before {
+    width: 18px;
+    height: 39px;
+
+    background: url(../img/fb-big.png) no-repeat center;
+  }
+
+  &--instagram::before {
+    width: 36px;
+    height: 36px;
+
+    background: url(../img/ig-big.png) no-repeat center;
+  }
+}
+
+.page-footer__copyright {
+  padding: 0 20px;
+}
+
+.copyright__text {
+  display: block;
+  margin-bottom: 12px;
+
+  text-align: center;
 }
 
 .copyright__link {
-  color: #ffffff;
+  display: block;
+  padding: 12px 0;
 
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+
+  border: 1px solid #3e3e3e;
+
+  &:hover {
+    border-color: #515151;
+  }
+
+  &:active {
+    border-color: #252525;
+    background-color: #252525;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    position: relative;
+
+    width: 640px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  .page-footer__contacts {
+    margin: 0;
+    margin-bottom: 50px;
+    padding-right: 160px;
+
+    text-align: left;
+  }
+
+  .contacts__headline {
+    text-transform: uppercase;
+  }
+
   .contacts__phone {
+    margin: 0;
+    padding: 0;
+
     font-weight: normal;
+
+    border: none;
+  }
+
+  .page-footer__copyright {
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    padding: 0;
+  }
+
+  .copyright__link {
+    width: 160px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .page-footer__contacts {
+    width: 330px;
+    margin: 0;
+    padding-right: 0;
+  }
+
+  .page-footer__social {
+    width: 165px;
+    margin-bottom: 0;
+    margin-right: 160px;
+  }
+
   .page-footer__social-title {
     display: block;
+    margin-bottom: 10px;
+
+    text-align: center;
+  }
+
+  .social__item {
+    flex-basis: 50px;
+    height: 50px;
+    flex-grow: 0;
+
+    &--vkontakte::before {
+      background: url(../img/vk-small.png) no-repeat center;
+    }
+
+    &--facebook::before {
+      background: url(../img/fb-small.png) no-repeat center;
+    }
+
+    &--instagram::before {
+      background: url(../img/ig-small.png) no-repeat center;
+    }
+  }
+
+  .page-footer__copyright {
+    position: static;
   }
 }
