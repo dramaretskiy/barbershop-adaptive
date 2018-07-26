@@ -8,10 +8,10 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
-var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var minifyhtml = require("gulp-htmlmin");
+var imagemin = require('gulp-imagemin');
 var minifyjs = require("gulp-uglify");
 var run = require("run-sequence");
 var server = require("browser-sync").create();
@@ -55,18 +55,6 @@ gulp.task("style", function () {
   .pipe(server.stream());
 });
 
-/* Задание делает спрайт из файлов, на которые мы указываем, в инлайновом виде, то есть можно вносить изменения через CSS
-Команда gulp sprite */
-
-gulp.task("sprite", function () {
-  return gulp.src("source/img/icon-*.svg")
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
-});
-
 /* Запускаем posthtml c плагином include, чтобы автоматически вставить спрайт в html файл, минифицируем html
 Команда gulp html */
 
@@ -85,6 +73,15 @@ gulp.task("html", function () {
   }))
   .pipe(gulp.dest("build"))
   .pipe(server.stream());
+});
+
+/* Запускаем минификацию изображений
+Команда gulp minimg */
+
+gulp.task('minimg', function () {
+    gulp.src('source/img/*.{png,jpg,svg}')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/img'))
 });
 
 /* Запускаем минификацию js
@@ -107,8 +104,8 @@ gulp.task("build", function (done) {
   "clean",
   "copy",
   "style",
-  "sprite",
   "html",
+  "minimg",
   "minjs",
   done
   );
