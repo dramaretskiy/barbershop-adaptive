@@ -178,7 +178,7 @@
     background-image: url(../img/bg-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center -50px;
   }
 
   .page-header__logo {
@@ -196,6 +196,24 @@
       height: auto;
 
       transform: translateX(-50%);
+    }
+  }
+
+  .inner-page .page-header__logo {
+    height: 175px;
+    padding-bottom: 41px;
+
+    &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 41px;
+
+    background: url(../img/corner-double.svg);
     }
   }
 
@@ -305,6 +323,10 @@
     & img {
       top: 60px;
     }
+  }
+
+  .inner-page .page-header__logo {
+    height: 245px;
   }
 
   .main-navigation__wrapper {
