@@ -6,7 +6,7 @@
     <title>Запись на стрижку</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body class="inner-page">
 
     <header class="page-header">
       <div class="page-header__logo">
@@ -16,7 +16,7 @@
           <img src="img/logotype-mobile.svg" alt="Логотип" width="370" height="153">
         </picture>
       </div>
-      <nav class="main-navigation main-navigation--opened">
+      <nav class="main-navigation main-navigation--closed">
         <button class="main-navigation__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list">
@@ -50,61 +50,80 @@
       <section class="record">
         <div class="record__wrapper">
           <h2 class="record__headline">Запись на стрижку</h2>
+          <a class="record__to-index-btn button" href="#">На главную</a>
           <form class="record__form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="record__text-fields">
-              <input class="record__text" type="text" name="surname" id="surname" placeholder="Фамилия">
-              <input class="record__text" type="text" name="name" id="name" placeholder="Имя">
-              <input class="record__text" type="text" name="patronymic" id="patronymic" placeholder="Отчество">
-              <input class="record__text" type="tel" name="phone" id="phone" placeholder="Контактный телефон">
-              <input class="record__text" type="email" name="email" id="email" placeholder="Контактный e-mail">
-              <textarea name="comment" id="comment" rows="6" cols="30" placeholder="Доп. информация для мастера"></textarea>
+            <div class="record__field record__field--fullname">
+              <input class="record__text record__text--fulname" type="text" name="surname" id="surname" placeholder="Фамилия">
+              <input class="record__text record__text--fulname" type="text" name="name" id="name" placeholder="Имя">
+              <input class="record__text record__text--fulname" type="text" name="patronymic" id="patronymic" placeholder="Отчество">
             </div>
-            <fieldset class="record__beard-model">
-              <legend class="record__subtitle">Выберите модель бороды:</legend>
+            <div class="record__field record__field--contacts">
+              <input class="record__text record__text--contacts" type="tel" name="phone" id="phone" placeholder="Контактный телефон">
+              <input class="record__text record__text--contacts" type="email" name="email" id="email" placeholder="Контактный e-mail">
+            </div>
+            <div class="record__field record__field--comments">
+              <textarea class="record__text record__text--comments" name="comment" id="comment" rows="3" placeholder="Доп. информация для мастера"></textarea>
+            </div>
+            <fieldset class="record__beard-models">
+              <h3 class="record__subtitle">Выберите модель бороды:</h3>
               <ul class="record__radio-buttons">
                 <li class="record__beard-model">
                   <input type="radio" name="beard-model" id="admiral" value="admiral" checked>
                   <label class="record__radio" for="admiral">адмирал</label>
-                  <img src="" alt="адмирал">
+                  <img src="img/beard-admiral.svg" alt="адмирал">
                 </li>
                 <li class="record__beard-model">
                   <input type="radio" name="beard-model" id="lumberjack" value="lumberjack">
                   <label class="record__radio" for="lumberjack">лесоруб</label>
-                  <img src="" alt="лесоруб">
+                  <img src="img/beard-lumberjack.svg" alt="лесоруб">
                 </li>
                 <li class="record__beard-model">
                   <input type="radio" name="beard-model" id="polar" value="polar">
                   <label class="record__radio" for="polar">полярник</label>
-                  <img src="" alt="полярник">
+                  <img src="img/beard-polar.svg" alt="полярник">
                 </li>
                 <li class="record__beard-model">
                   <input type="radio" name="beard-model" id="boyar" value="boyar">
                   <label class="record__radio" for="boyar">боярин</label>
-                  <img src="" alt="боярин">
+                  <img src="img/beard-boyar.svg" alt="боярин">
                 </li>
                 <li class="record__beard-model">
                   <input type="radio" name="beard-model" id="sage" value="sage">
                   <label class="record__radio" for="sage">мудрец</label>
-                  <img src="" alt="мудрец">
+                  <img src="img/beard-sage.svg" alt="мудрец">
                 </li>
               </ul>
             </fieldset>
             <fieldset class="record__add-services">
-              <legend class="record__subtitle">Дополнительные услуги:</legend>
-              <input type="checkbox" name="add-service" id="paint-beard" value="paint-beard" checked>
-              <label class="record__checkbox checkbox" for="paint-beard">Подкрасить бороду</label>
-              <input type="checkbox" name="add-service" id="wind-mustache" value="wind-mustache" checked>
-              <label class="record__checkbox checkbox" for="wind-mustache">Накрутить усы</label>
-              <input type="checkbox" name="add-service" id="comb-beard" value="comb-beard">
-              <label class="record__checkbox checkbox" for="comb-beard">Причесать бороду</label>
-              <input type="checkbox" name="add-service" id="straighten-hair" value="straighten-hair">
-              <label class="record__checkbox checkbox" for="straighten-hair">Подровнять виски</label>
-              <input type="checkbox" name="add-service" id="remove-gray-hair" value="remove-gray-hair">
-              <label class="record__checkbox checkbox" for="remove-gray-hair">Убрать седину</label>
-              <input type="checkbox" name="add-service" id="polish-bald" value="polish-bald">
-              <label class="record__checkbox checkbox" for="polish-bald">Отполировать лысину</label>
+              <h3 class="record__subtitle record__subtitle--add-service">Дополнительные услуги:</h3>
+              <ul class="record__checkbox-buttons">
+                <li class="record__add-service">
+                  <input type="checkbox" name="add-service" id="paint-beard" value="paint-beard" checked>
+                  <label class="record__checkbox checkbox" for="paint-beard">Подкрасить бороду</label>
+                </li>
+                <li class="record__add-service">
+                  <input type="checkbox" name="add-service" id="wind-mustache" value="wind-mustache" checked>
+                  <label class="record__checkbox checkbox" for="wind-mustache">Накрутить усы</label>
+                </li>
+                <li class="record__add-service">
+                  <input type="checkbox" name="add-service" id="comb-beard" value="comb-beard">
+                  <label class="record__checkbox checkbox" for="comb-beard">Причесать бороду</label>
+                </li>
+                <li class="record__add-service">
+                  <input type="checkbox" name="add-service" id="straighten-hair" value="straighten-hair">
+                  <label class="record__checkbox checkbox" for="straighten-hair">Подровнять виски</label>
+                </li>
+                <li class="record__add-service">
+                  <input type="checkbox" name="add-service" id="remove-gray-hair" value="remove-gray-hair">
+                  <label class="record__checkbox checkbox" for="remove-gray-hair">Убрать седину</label>
+                </li>
+                <li class="record__add-service">
+                  <input type="checkbox" name="add-service" id="polish-bald" value="polish-bald">
+                  <label class="record__checkbox checkbox" for="polish-bald">Отполировать лысину</label>
+                </li>
+              </ul>
             </fieldset>
-            <button class="record__submit button" type="submit">Отправить заявку</button>
+            <button class="record__submit" type="submit">Отправить заявку</button>
           </form>
         </div>
       </section>
