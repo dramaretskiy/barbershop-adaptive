@@ -79,9 +79,13 @@ gulp.task("html", function () {
 Команда gulp minimg */
 
 gulp.task('minimg', function () {
-    gulp.src('source/img/*.{png,jpg,svg}')
-        .pipe(imagemin())
-        .pipe(gulp.dest('build/img'))
+  gulp.src('source/img/**/*.{png,jpg,svg}')
+  .pipe(imagemin([
+    imagemin.optipng({optimizationLevel: 3}),
+    imagemin.jpegtran({progressive: true}),
+    imagemin.svgo()
+  ]))
+  .pipe(gulp.dest('build/img'));
 });
 
 /* Запускаем минификацию js
