@@ -1,0 +1,148 @@
+.modal-login {
+  position: absolute;
+  top: 135px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  display: none;
+  width: 100%;
+
+  background-color: @white;
+
+  filter: drop-shadow(0 30px 50px rgba(0,0,0,.75));
+}
+
+.modal-login__wrapper {
+  padding: 0 20px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+.modal-login__headline {
+  margin: 0;
+  margin-bottom: 25px;
+
+  .set-font(bold, 30px, 30px);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal-login__description {
+  margin: 0;
+  margin-bottom: 25px;
+
+  text-align: center;
+}
+
+.modal-login__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.modal-login__form input[type="checkbox"] {
+  display: none;
+}
+
+label[for="login"],
+label[for="password"] {
+  display: block;
+  width: 100%;
+}
+
+label[for="password"] {
+  margin-bottom: 30px;
+}
+
+.modal-login__text {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 6px;
+  padding: 9px 17px;
+
+  font-family: inherit;
+  .set-font(normal, 18px, 30px);
+  color: @black;
+  outline: none;
+
+  background-repeat: no-repeat;
+  background-position: right 20px top 50%;
+
+  border: 1px solid #e5ddd5;
+}
+
+.modal-login__form input[id="login"] {
+  background-image: url(../img/user.svg);
+}
+
+.modal-login__form input[id="password"] {
+  background-image: url(../img/locked.svg);
+}
+
+.modal-login__checkbox {
+  position: relative;
+
+  display: block;
+  box-sizing: border-box;
+  width: 60%;
+
+  padding-left: 50px;
+}
+
+.modal-login__forgot {
+  display: block;
+  box-sizing: border-box;
+  width: 40%;
+
+  text-align: right;
+  color: @black;
+}
+
+.modal-login__submit {
+  width: 45%;
+  margin-top: 30px;
+  padding: 13px 0;
+
+  font-family: inherit;
+  .set-font(bold, 18px, 24px);
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #826550;
+
+  border: none;
+}
+
+.modal-login__close {
+  width: 47%;
+  margin-top: 30px;
+  padding: 13px 0;
+
+  font-family: inherit;
+  .set-font(bold, 18px, 24px);
+  color: @black;
+  text-transform: uppercase;
+
+  background-color: transparent;
+
+  border: 1px solid #e5ddd5;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-login {
+    position: fixed;
+    top: 128px;
+    left: 50%;
+
+    width: 460px;
+    box-sizing: border-box;
+
+    transform: translateX(-50%);
+  }
+
+  .modal-login__wrapper {
+    padding: 50px 70px;
+  }
+}
