@@ -98,6 +98,35 @@
     padding-left: 20px;
   }
 
+  .user-navigation__link {
+    font-weight: normal;
+    line-height: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: none;
+  }
+
+  .main-navigation--opened .user-navigation__link {
+    position: relative;
+
+    padding-left: 50px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 20px;
+      top: 45%;
+
+      width: 16px;
+      height: 16px;
+
+      background-image: url(../img/login.png);
+
+      transform: translateY(-45%);
+    }
+  }
+
   .main-navigation--opened .main-navigation__link {
     border-top: 1px solid #886e5b;
     border-bottom: 1px solid #71543f;
