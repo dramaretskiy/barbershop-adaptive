@@ -6,11 +6,16 @@
   z-index: 100;
 
   display: none;
+
   width: 100%;
 
   background-color: @white;
 
   filter: drop-shadow(0 30px 50px rgba(0,0,0,.75));
+}
+
+.modal-login--show {
+  display: block;
 }
 
 .modal-login__wrapper {
@@ -74,11 +79,25 @@ label[for="password"] {
 }
 
 .modal-login__form input[id="login"] {
+  padding-right: 40px;
+
   background-image: url(../img/user.svg);
 }
 
 .modal-login__form input[id="password"] {
+  padding-right: 40px;
+
   background-image: url(../img/locked.svg);
+}
+
+.modal-login__form input {
+  &:hover {
+    border-color: #d5c9bd;
+  }
+
+  &:focus {
+    border-color: #999999;
+  }
 }
 
 .modal-login__checkbox {
@@ -98,6 +117,10 @@ label[for="password"] {
 
   text-align: right;
   color: @black;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .modal-login__submit {
@@ -113,6 +136,16 @@ label[for="password"] {
   background-color: #826550;
 
   border: none;
+
+  &:hover {
+    background-color: #6a4d38;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    color: #a09187;
+  }
 }
 
 .modal-login__close {
@@ -128,6 +161,18 @@ label[for="password"] {
   background-color: transparent;
 
   border: 1px solid #e5ddd5;
+
+  &:hover {
+    border-color: #d5c9bd;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    color: #a99f95;
+
+    background-color: #d5c9bd;
+  }
 }
 
 @media (min-width: @tablet-width) {
