@@ -76,6 +76,8 @@ label[for="password"] {
   background-position: right 20px top 50%;
 
   border: 1px solid #e5ddd5;
+
+  transition: border-color .2s linear;
 }
 
 .modal-login__form input[id="login"] {
@@ -137,6 +139,8 @@ label[for="password"] {
 
   border: none;
 
+  transition: background-color .2s linear,color .2s linear;
+
   &:hover {
     background-color: #6a4d38;
 
@@ -162,6 +166,8 @@ label[for="password"] {
 
   border: 1px solid #e5ddd5;
 
+  transition: border .1s linear,background-color .2s linear,color .2s linear;
+
   &:hover {
     border-color: #d5c9bd;
 
@@ -176,6 +182,22 @@ label[for="password"] {
 }
 
 @media (min-width: @tablet-width) {
+
+  @keyframes bounce {
+    0% {
+      transform: translate(-50%, -2000px);
+    }
+    70% {
+      transform: translate(-50%, 30px);
+    }
+    90% {
+      transform: translate(-50%, -10px);
+    }
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+
   .modal-login {
     position: fixed;
     top: 128px;
@@ -185,6 +207,10 @@ label[for="password"] {
     box-sizing: border-box;
 
     transform: translateX(-50%);
+
+    &--show {
+      animation: bounce .6s;
+    }
   }
 
   .modal-login__wrapper {

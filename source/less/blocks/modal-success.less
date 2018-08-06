@@ -1,3 +1,18 @@
+@keyframes bounce-success {
+  0% {
+    transform: translate(-50%, -1000%);
+  }
+  70% {
+    transform: translate(-50%, -45%);
+  }
+  90% {
+    transform: translate(-50%, -55%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
 .modal-success {
   position: fixed;
   top: 50%;
@@ -11,6 +26,8 @@
   transform: translate(-50%, -50%);
 
   filter: drop-shadow(0 30px 50px rgba(0,0,0,.75));
+
+  animation: bounce-success .6s;
 }
 
 .modal-success--show {

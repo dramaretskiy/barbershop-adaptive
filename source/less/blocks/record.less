@@ -55,6 +55,8 @@
   outline: none;
   border: 1px solid #e5ddd5;
 
+  transition: border-color .2s linear;
+
   &:hover {
     border-color: #d5c9bd;
   }
@@ -127,6 +129,8 @@
     background-color: #ffffff;
 
     transform: translateX(-50%);
+
+    transition: border-color .2s linear,box-shadow .2s linear;
   }
 
   &:hover {
@@ -184,42 +188,6 @@
   line-height: 30px;
 }
 
-.checkbox {
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    top: 50%;
-
-    width: 36px;
-    height: 36px;
-    box-sizing: border-box;
-
-    border: 1px solid #e5ddd5;
-    background-color: #ffffff;
-
-    transform: translateY(-50%);
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:hover::before {
-    border-color: #d5c9bd;
-  }
-
-  &:active::before {
-    background-color: #d5c9bd;
-    background-image: url(../img/tick.svg);
-    background-repeat: no-repeat;
-    background-size: 22px 16px;
-    background-position: center;
-  }
-}
-
 input[type="checkbox"]:checked + label::before {
   background-image: url(../img/tick.svg);
   background-repeat: no-repeat;
@@ -243,6 +211,8 @@ input[type="checkbox"]:checked + label:active::before {
   .paint(#826550, #ffffff);
 
   border: none;
+
+  transition: background-color .2s linear,color .2s linear;
 
   &:hover {
     background-color: #6a4d38;
