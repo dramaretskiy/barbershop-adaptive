@@ -1,2 +1,2 @@
 # barbershop-adaptive
-< Учебный проект интенсива "HTML и CSS, уровень 2" HTML Academy >
+< Intensive training project "HTML and CSS, level 2" HTML Academy >
